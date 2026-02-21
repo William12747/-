@@ -57,7 +57,7 @@
     "files": [
       "build/**/*",
       "electron/**/*",
-      "node_modules/**/*"
+      "package.json"
     ],
     "asarUnpack": [
       "node_modules/ffmpeg-static/**/*",
