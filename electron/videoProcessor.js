@@ -10,7 +10,7 @@ ffmpeg.setFfmpegPath(ffmpegStatic);
 ffmpeg.setFfprobePath(ffprobeStatic.path);
 
 // 支援的輸入格式
-const SUPPORTED_FORMATS = ['.flv', '.asf', '.rmvb', '.mpeg', '.mpg', '.wmv', '.avi'];
+const SUPPORTED_FORMATS = ['.flv', '.asf', '.rmvb', '.mpeg', '.mpg', '.wmv', '.avi', '.3gp', '.3gpp'];
 
 /**
  * 遞迴掃描資料夾，找出支援的影片檔案
