@@ -6,8 +6,12 @@ const ffprobeStatic = require('ffprobe-static');
 const logger = require('./logger');
 
 // 設定 FFmpeg 和 FFprobe 路徑
-ffmpeg.setFfmpegPath(ffmpegStatic);
-ffmpeg.setFfprobePath(ffprobeStatic.path);
+// 打包後二進位檔會解包至 app.asar.unpacked/，需修正路徑
+const sep = require('path').sep;
+const ffmpegPath = ffmpegStatic.replace('app.asar' + sep, 'app.asar.unpacked' + sep);
+const ffprobePath = ffprobeStatic.path.replace('app.asar' + sep, 'app.asar.unpacked' + sep);
+ffmpeg.setFfmpegPath(ffmpegPath);
+ffmpeg.setFfprobePath(ffprobePath);
 
 // 支援的輸入格式
 const SUPPORTED_FORMATS = ['.flv', '.asf', '.rmvb', '.mpeg', '.mpg', '.wmv', '.avi'];
