@@ -1,0 +1,116 @@
+.control-panel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-start {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+  background: #38a169;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
+}
+
+.btn-pause {
+  background: #ed8936;
+  color: white;
+}
+
+.btn-pause:hover {
+  background: #dd6b20;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(237, 137, 54, 0.3);
+}
+
+.btn-resume {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-resume:hover {
+  background: #38a169;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
+}
+
+.btn-stop {
+  background: #f56565;
+  color: white;
+}
+
+.btn-stop:hover {
+  background: #e53e3e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(245, 101, 101, 0.3);
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.stat-success .stat-value {
+  color: #48bb78;
+}
+
+.stat-processing .stat-value {
+  color: #667eea;
+}
+
+.stat-failed .stat-value {
+  color: #f56565;
+}
